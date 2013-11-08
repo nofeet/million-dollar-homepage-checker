@@ -1,2 +1,6 @@
 beautifulsoup4==4.3.2
-requests==2.0.0
+gevent==0.13.8
+greenlet==0.4.1
+grequests==0.2.0
+requests==2.0.1
+wsgiref==0.1.2
