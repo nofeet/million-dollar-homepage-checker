@@ -34,7 +34,7 @@ class Advertiser(object):
         self._response = response
         if response is not None:
             self.status = response.status_code
-            self.text = response.status_code
+            self.text = response.content
             self.elapsed = response.elapsed
             self.dest_url = response.url
             self.num_redirects = len(response.history)
