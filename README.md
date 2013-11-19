@@ -3,6 +3,8 @@ million-dollar-homepage-checker
 
 How many of the advertised websites on The Million Dollar Homepage are still up?
 
+[TODO: generate report of results and create an updated bitmap that blacks out the dead sites.]
+
 ##### USAGE
 
 First, get all the required Python packages:
