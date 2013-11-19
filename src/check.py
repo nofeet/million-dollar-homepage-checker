@@ -9,6 +9,7 @@ import requests
 
 
 MILLION_DOLLAR_HOMEPAGE_URL = 'http://www.milliondollarhomepage.com/'
+NUM_SIMULT_REQUESTS = 10
 
 
 class Advertiser(object):
@@ -59,7 +60,8 @@ def parse_million_dollar_homepage():
                                       tag['title']))
         reqs.append(grequests.get(tag['href']))
 
-    for (advertiser, response) in zip(advertisers, grequests.map(reqs)):
+    for (advertiser, response) in zip(advertisers,
+                                      grequests.map(reqs, NUM_SIMULT_REQUESTS)):
         advertiser.process_response(response)
 
     return advertisers
